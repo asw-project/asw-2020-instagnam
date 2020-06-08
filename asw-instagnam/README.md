@@ -49,7 +49,7 @@ per trovare le ricette seguite dall'utente U, è basata su invocazioni remote RE
 
 Per eseguire questo progetto: 
 
-* Aprire una finestra powershell nella cartella del progetto ed eseguire *gradle build*
+* Aprire una finestra powershell nella cartella del progetto ed eseguire `gradle build`
 
 * Avviare *Docker* sul proprio dispositivo`
 
