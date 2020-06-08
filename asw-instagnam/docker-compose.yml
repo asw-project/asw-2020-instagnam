@@ -1,0 +1,70 @@
+version: '3'
+services:
+
+  consul:
+    image: consul
+    
+  apigateway:
+    build: ./api-gateway
+    ports:
+    - "8080:8080"
+    depends_on:
+      - "consul"
+       
+  ricette:
+     build: ./ricette
+     depends_on:
+       - "consul"
+     depends_on:
+       - "postgresDB"
+      
+  connessioni:
+     build: ./connessioni
+     depends_on:
+      - "consul"
+     depends_on:
+       - "postgresDB2"
+        
+  ricette-seguite:
+    build: ./ricette-seguite
+    depends_on:
+      - "consul"
+    depends_on:
+       - "postgresDB3"
+       
+  postgresDB:
+    container_name: postgresDB1
+    image: postgres
+    volumes:
+      - "$PWD/postgres:/docker-entrypoint-initdb.d"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ricette
+      
+  postgresDB2:
+    container_name: postgresDB2
+    image: postgres
+    volumes:
+      - "$PWD/postgres:/docker-entrypoint-initdb.d"
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: connessioni
+   
+  postgresDB3:
+    container_name: postgresDB3
+    image: postgres
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: ricette-seguite
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

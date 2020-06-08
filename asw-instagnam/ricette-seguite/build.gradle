@@ -26,6 +26,9 @@ dependencies {
     implementation ("io.springfox:springfox-swagger-ui:${swaggerVersion}"){
         exclude group: "org.springframework"
     }
-
+    
+	 implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//implementation 'org.hsqldb:hsqldb' [Eliminato per supporto PostgreSQL]
+	implementation 'org.postgresql:postgresql'
 }
 

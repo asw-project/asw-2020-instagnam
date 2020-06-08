@@ -1,11 +1,13 @@
 ###########################################################
-# Dockerfile per l'applicazione sentence / sentence service 
+# Dockerfile per l'applicazione api-gateway
 ###########################################################
 
 FROM openjdk:8-jdk 
 
-ADD build/libs/apigateway.jar apigateway.jar
+RUN apt-get update && apt-get install -y curl
+
+ADD build/libs/api-gateway.jar api-gateway.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java", "-Xmx128m", "-Xms128m", "-jar", "apigateway.jar"]
+ENTRYPOINT ["java", "-Xmx128m", "-Xms128m", "-jar", "api-gateway.jar"]

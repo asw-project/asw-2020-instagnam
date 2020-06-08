@@ -49,13 +49,13 @@ per trovare le ricette seguite dall'utente U, è basata su invocazioni remote RE
 
 Per eseguire questo progetto: 
 
-* avviare *Consul* eseguendo lo script `start-consul.sh` 
+* Aprire una finestra powershell nella cartella del progetto ed eseguire *gradle build*
 
-* per avviare l'applicazione *Instagnam*, eseguire lo script `run-instagnam.sh` 
+* Avviare *Docker* sul proprio dispositivo`
 
-Alla fine, l'applicazione può essere arrestata usando lo script `stop-java-processes.sh` (**da usare con cautela!**). 
+* Avviare l'applicazione *Instagnam* avviando lo script 'docker-compose-start.sh' 
 
-Inoltre, *Consul* può essere arrestato con lo script `stop-consul.sh`. 
+* L'applicazione può essere arrestata usando lo script `docker-compose-stop` e poi 'docker-compose-delete' oppure direttamente dalla dashboard di Docker. 
 
 
 ## Descrizione delle attività da svolgere 

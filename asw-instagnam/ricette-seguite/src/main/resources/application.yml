@@ -5,19 +5,32 @@ spring:
     name: ricette-seguite
   cloud:
     consul:
-      host: localhost
+      host: consul
       port: 8500
       discovery: 
         instanceId: ${spring.application.name}-${spring.cloud.client.hostname}-${random.value}
         healthCheckPath: /actuator/health
-        healthCheckInterval: 10s
+        healthCheckInterval: 30s
         # configurazione per effettuare esprimenti, NON USARE UN PRODUZIONE 
         # dopo quanto tempo consul deve smettere di restituire servizi che non rispondono all'health check? 
-        healthCheckCriticalTimeout: 60s
+        healthCheckCriticalTimeout: 120s
         # consul deve restituire solo servizi che passano l'health check (default=false) 
         queryPassing: true 
     loadbalancer: 
       ribbon.enabled: false 
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+      use-new-id-generator-mapping: false
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://postgresDB3:5432/ricette-seguite
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
+    
 
 server: 
   port: ${PORT:${SERVER_PORT:0}}
