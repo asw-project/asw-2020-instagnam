@@ -2,7 +2,7 @@
 
 echo Docker compose infrastructure building in progress..
 
-docker-compose -f docker-compose.yml build
+
 
 docker-compose up -d
 
