@@ -83,6 +83,8 @@ Per eseguire questo progetto:
 
 * Avviare *Docker* sul proprio dispositivo`
 
+* Avviare la build dei contenitori trammite `docker-compose-build.sh` 
+
 * Avviare l'applicazione *Instagnam* avviando lo script `docker-compose-start.sh` 
 
 * L'applicazione può essere arrestata usando lo script `docker-compose-stop` e poi `docker-compose-delete` oppure direttamente dalla dashboard di Docker. 
