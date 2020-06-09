@@ -10,6 +10,12 @@ services:
     - "8080:8080"
     depends_on:
       - "consul"
+    depends_on:
+      - "ricette"
+    depends_on:
+      - "connessioni"
+    depends_on:
+      - "ricette-seguite"
        
   ricette:
      build: ./ricette
@@ -17,7 +23,8 @@ services:
        - "consul"
      depends_on:
        - "postgresDB"
-      
+
+       
   connessioni:
      build: ./connessioni
      depends_on:
