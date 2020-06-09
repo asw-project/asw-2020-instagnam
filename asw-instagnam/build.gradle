@@ -1,3 +1,13 @@
+dependencies {
+	implementation project(":asw-instagnam-common-api-event")
+	compileOnly "org.projectlombok:lombok:${lombokVersion}"
+	annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+}
+
+jar {
+    enabled = true
+}
+
 buildscript {
 	ext {
 		springBootVersion = '2.2.6.RELEASE'
