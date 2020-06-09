@@ -10,12 +10,6 @@ services:
     - "8080:8080"
     depends_on:
       - "consul"
-    depends_on:
-      - "ricette"
-    depends_on:
-      - "connessioni"
-    depends_on:
-      - "ricette-seguite"
        
   ricette:
      build: ./ricette
@@ -23,7 +17,8 @@ services:
        - "consul"
      depends_on:
        - "postgresDB"
-
+     depends_on:
+       - "apigateway"
        
   connessioni:
      build: ./connessioni
@@ -31,6 +26,8 @@ services:
       - "consul"
      depends_on:
        - "postgresDB2"
+     depends_on:
+       - "apigateway"
         
   ricette-seguite:
     build: ./ricette-seguite
@@ -38,6 +35,8 @@ services:
       - "consul"
     depends_on:
        - "postgresDB3"
+    depends_on:
+       - "apigateway"
        
   postgresDB:
     container_name: postgresDB1
