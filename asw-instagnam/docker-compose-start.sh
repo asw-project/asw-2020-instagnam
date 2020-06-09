@@ -1,9 +1,5 @@
-#Start and build docker-compose
+#Start docker-compose
 
-echo Docker compose infrastructure building in progress..
-
-
-
-docker-compose up -d
+docker-compose up 
 
 echo Docker compose infrastructure is up and running. 
