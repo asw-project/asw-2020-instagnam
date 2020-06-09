@@ -2,6 +2,10 @@ include 'ricette'
 include 'connessioni'
 include 'ricette-seguite'
 include 'api-gateway'
+include 'asw-instagnam-common-api-event'
+include 'ricette-service-api-event'
+include 'connessioni-service-api-event'
+
 
 rootProject.name = 'asw-instagnam'
 
@@ -9,3 +13,6 @@ project(':ricette').name = 'ricette'
 project(':connessioni').name = 'connessioni'
 project(':ricette-seguite').name = 'ricette-seguite'
 project(':api-gateway').name = 'api-gateway'
+project(':asw-instagnam-common-api-event').name = 'asw-instagnam-common-api-event'
+project(':connessioni-service-api-event').name = 'connessioni-service-api-event'
+project(':ricette-service-api-event').name = 'ricette-service-api-event'
