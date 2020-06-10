@@ -1,7 +1,10 @@
 package asw.instagnam.ricetteseguite.domain.model;
 
+import javax.persistence.Entity;
+
 import lombok.*;
 
+@Entity
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Ricetta {
 

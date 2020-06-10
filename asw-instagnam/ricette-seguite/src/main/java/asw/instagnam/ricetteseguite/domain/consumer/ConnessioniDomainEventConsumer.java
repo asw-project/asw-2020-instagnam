@@ -24,7 +24,7 @@ public class ConnessioniDomainEventConsumer implements DomainEventConsumer {
 		if (event instanceof ConnessioneCreatedEvent) {
 			this.handleConnessioneCreatedEvent(event);
 		} else {
-			System.out.println("UNKNOWN EVENT\n");
+			System.out.println("Evento non riconosciuto\n");
 		}
 	}
 	
