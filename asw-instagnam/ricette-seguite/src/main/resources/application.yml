@@ -4,7 +4,7 @@ spring:
   application: 
     name: ricette-seguite
     
-      kafka:
+  kafka:
      bootstrap-servers: kafka:9092
      consumer:
         bootstrap-servers: kafka:9092
