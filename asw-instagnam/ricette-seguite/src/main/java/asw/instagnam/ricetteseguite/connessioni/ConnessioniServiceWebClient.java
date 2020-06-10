@@ -1,6 +1,8 @@
 package asw.instagnam.ricetteseguite.connessioni;
 
-import asw.instagnam.ricetteseguite.domain.*; 
+import asw.instagnam.ricetteseguite.domain.*;
+import asw.instagnam.ricetteseguite.domain.model.Connessione;
+import asw.instagnam.ricetteseguite.domain.service.ConnessioniService;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;

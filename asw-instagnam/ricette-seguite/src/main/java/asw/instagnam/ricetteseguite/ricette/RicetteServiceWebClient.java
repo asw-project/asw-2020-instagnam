@@ -1,6 +1,8 @@
 package asw.instagnam.ricetteseguite.ricette;
 
-import asw.instagnam.ricetteseguite.domain.*; 
+import asw.instagnam.ricetteseguite.domain.*;
+import asw.instagnam.ricetteseguite.domain.model.Ricetta;
+import asw.instagnam.ricetteseguite.domain.service.RicetteService;
 
 import org.springframework.stereotype.Service;
 import org.springframework.beans.factory.annotation.Autowired;

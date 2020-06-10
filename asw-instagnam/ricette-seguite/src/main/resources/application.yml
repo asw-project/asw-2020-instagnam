@@ -3,6 +3,22 @@
 spring: 
   application: 
     name: ricette-seguite
+    
+      kafka:
+     bootstrap-servers: kafka:9092
+     consumer:
+        bootstrap-servers: kafka:9092
+        group-id: ${spring.application.name}
+        auto-offset-reset: earliest
+        key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+        properties:
+           spring.json.trusted.packages: "*"
+        
+     producer:
+        bootstrap-servers: kafka:9092
+        key-serializer: org.apache.kafka.common.serialization.StringSerializer
+        value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   cloud:
     consul:
       host: consul
@@ -35,3 +51,8 @@ spring:
 server: 
   port: ${PORT:${SERVER_PORT:0}}
 #  port: 8080
+
+# fa il logging dei comandi sql eseguiti 
+#spring.jpa.show-sql: true
+# disable OSIV
+spring.jpa.open-in-view: false

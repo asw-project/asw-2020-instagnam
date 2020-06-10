@@ -1,6 +1,8 @@
 package asw.instagnam.ricetteseguite.rest;
 
-import asw.instagnam.ricetteseguite.domain.*; 
+import asw.instagnam.ricetteseguite.domain.*;
+import asw.instagnam.ricetteseguite.domain.model.Ricetta;
+import asw.instagnam.ricetteseguite.domain.service.RicetteSeguiteService;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;

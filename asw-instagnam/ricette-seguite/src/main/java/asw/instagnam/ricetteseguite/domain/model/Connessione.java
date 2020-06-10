@@ -1,4 +1,4 @@
-package asw.instagnam.ricetteseguite.domain;
+package asw.instagnam.ricetteseguite.domain.model;
 
 import lombok.*; 
 
