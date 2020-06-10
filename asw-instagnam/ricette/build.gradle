@@ -28,5 +28,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	//implementation 'org.hsqldb:hsqldb' [Eliminato per supporto PostgreSQL]
 	implementation 'org.postgresql:postgresql'
-
+    implementation project(":asw-instagnam-common-api-event")
+    implementation project(":ricette-service-api-event")
+    implementation 'org.springframework.kafka:spring-kafka'
 }
