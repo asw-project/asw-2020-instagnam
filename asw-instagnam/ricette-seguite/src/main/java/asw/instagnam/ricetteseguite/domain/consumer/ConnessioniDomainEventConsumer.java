@@ -43,16 +43,15 @@ public class ConnessioniDomainEventConsumer implements DomainEventConsumer {
 		// Finding all followed user's ricette
 		String autore = connessione.getFollowed();
 		Collection<Ricetta> ricette = ricetteRepository.findAllByAutore(autore);
-		// Saving ricette in a temporary list
-		List<RicettaSeguita> ricetteSeguite = new ArrayList<>();
-		ricette.stream().forEach(ricetta -> ricetteSeguite.add(new RicettaSeguita(connessione.getFollower(),
-				ricetta.getId(), ricetta.getAutore(), ricetta.getTitolo())));
+        
+		// Save new ricette seguite
+		for(Ricetta r: ricette) {
+			this.ricetteSeguiteRepository.save(new RicettaSeguita(connessione.getFollower(),
+					r.getId(), r.getAutore(), r.getTitolo()));
+		}
 
-        // Save new connessione in all repositories
+		// Save new connessione in repository
 		connessioniRepository.save(connessione);
-		ricetteSeguite.stream().forEach(ricettaSeguita -> ricetteSeguiteRepository.save(ricettaSeguita));
-
-
 	}
 
 }
