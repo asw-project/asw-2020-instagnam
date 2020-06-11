@@ -3,4 +3,4 @@
 
 docker-compose -f docker-compose.yml build
 
-echo Docker compose infrastructure is up and running. 
+echo Docker compose infrastructure builded, ready to start. 

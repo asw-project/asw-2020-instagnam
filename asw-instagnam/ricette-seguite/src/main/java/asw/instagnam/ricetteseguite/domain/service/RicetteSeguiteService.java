@@ -2,7 +2,6 @@ package asw.instagnam.ricetteseguite.domain.service;
 
 import org.springframework.stereotype.Service;
 
-import asw.instagnam.ricetteseguite.domain.model.Connessione;
 import asw.instagnam.ricetteseguite.domain.model.Ricetta;
 import asw.instagnam.ricetteseguite.domain.repository.ConnessioniRepository;
 import asw.instagnam.ricetteseguite.domain.repository.RicetteRepository;

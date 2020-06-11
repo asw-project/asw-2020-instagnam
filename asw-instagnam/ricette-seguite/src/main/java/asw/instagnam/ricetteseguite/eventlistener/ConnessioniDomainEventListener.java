@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import asw.instagnam.common.api.event.DomainEvent;
 import connessioni.service.api.event.ConnessioniServiceEventChannel;
-import asw.instagnam.ricetteseguite.domain.*;
 import asw.instagnam.ricetteseguite.domain.consumer.ConnessioniDomainEventConsumer;
 
 

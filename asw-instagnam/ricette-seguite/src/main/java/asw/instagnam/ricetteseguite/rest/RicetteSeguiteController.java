@@ -1,6 +1,5 @@
 package asw.instagnam.ricetteseguite.rest;
 
-import asw.instagnam.ricetteseguite.domain.*;
 import asw.instagnam.ricetteseguite.domain.model.Ricetta;
 import asw.instagnam.ricetteseguite.domain.service.RicetteSeguiteService;
 

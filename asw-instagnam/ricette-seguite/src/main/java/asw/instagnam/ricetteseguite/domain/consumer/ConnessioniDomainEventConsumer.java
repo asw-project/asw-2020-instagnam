@@ -8,10 +8,6 @@ import asw.instagnam.ricetteseguite.domain.model.Connessione;
 import asw.instagnam.ricetteseguite.domain.repository.ConnessioniRepository;
 import connessioni.service.api.event.ConnessioneCreatedEvent;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
 
 @Service
 public class ConnessioniDomainEventConsumer implements DomainEventConsumer {

@@ -38,7 +38,7 @@ spring:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
       use-new-id-generator-mapping: false
   datasource:
     platform: postgres
