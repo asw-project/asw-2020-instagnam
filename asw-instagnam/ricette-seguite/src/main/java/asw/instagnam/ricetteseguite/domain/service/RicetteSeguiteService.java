@@ -28,17 +28,11 @@ public class RicetteSeguiteService {
 
 
 	public Collection<Ricetta> getRicetteSeguite(String utente) {
-		/*Old version
-		//Find utente connections
-		return connessioniRepository.findAllByFollower(utente).stream()
-				//Find ricette created by followed users
-				.map(connessione -> ricetteRepository.findAllByAutore(connessione.getFollowed()))
-				         .flatMap(Collection::stream).collect(Collectors.toList());
-	} */
 
-		//Now ricette-seguite has new table ricette-seguite on DB	
+		/*Now ricette-seguite has new table ricette-seguite on DB*/	
 		Collection<Ricetta> ricetteSeguite = new ArrayList<>();
-        for(RicettaSeguita rs: this.ricetteSeguiteRepository.findAllByFollower(utente)) {
+		Collection<RicettaSeguita> ricette=this.ricetteSeguiteRepository.findAllByFollower(utente);
+        for(RicettaSeguita rs: ricette) {
         	Ricetta r = new Ricetta(rs.getIdRicetta(),
         			rs.getAutoreRicetta(), rs.getTitoloRicetta());
         	ricetteSeguite.add(r);
