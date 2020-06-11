@@ -39,7 +39,7 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: update
-      use-new-id-generator-mapping: false
+      use-new-id-generator-mapping: true
   datasource:
     platform: postgres
     url: jdbc:postgresql://postgresDB3:5432/ricette-seguite
