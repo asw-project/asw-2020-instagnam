@@ -4,7 +4,6 @@ import org.springframework.stereotype.Service;
 
 import asw.instagnam.ricetteseguite.domain.model.Ricetta;
 import asw.instagnam.ricetteseguite.domain.model.RicettaSeguita;
-import asw.instagnam.ricetteseguite.domain.model.RicettaSeguitaBreve;
 import asw.instagnam.ricetteseguite.domain.repository.ConnessioniRepository;
 import asw.instagnam.ricetteseguite.domain.repository.RicetteRepository;
 import asw.instagnam.ricetteseguite.domain.repository.RicetteSeguiteRepository;
@@ -28,7 +27,7 @@ public class RicetteSeguiteService {
 	private RicetteSeguiteRepository ricetteSeguiteRepository;
 
 
-	public Collection<RicettaSeguitaBreve> getRicetteSeguite(String utente) {
+	public Collection<Ricetta> getRicetteSeguite(String utente) {
 		/*Old version
 		//Find utente connections
 		return connessioniRepository.findAllByFollower(utente).stream()
@@ -38,11 +37,11 @@ public class RicetteSeguiteService {
 	} */
 
 		//Now ricette-seguite has new table ricette-seguite on DB	
-		Collection<RicettaSeguitaBreve> ricetteSeguite = new ArrayList<>();
-        for(RicettaSeguita r: this.ricetteSeguiteRepository.findAllByFollower(utente)) {
-        	RicettaSeguitaBreve rsb = new RicettaSeguitaBreve(r.getIdRicetta(),
-        			r.getAutoreRicetta(),r.getTitoloRicetta());
-        	ricetteSeguite.add(rsb);
+		Collection<Ricetta> ricetteSeguite = new ArrayList<>();
+        for(RicettaSeguita rs: this.ricetteSeguiteRepository.findAllByFollower(utente)) {
+        	Ricetta r = new Ricetta(rs.getIdRicetta(),
+        			rs.getAutoreRicetta(), rs.getTitoloRicetta());
+        	ricetteSeguite.add(r);
         }
         return ricetteSeguite;
 	}
