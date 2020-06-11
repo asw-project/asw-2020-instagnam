@@ -1,14 +1,22 @@
 # Compiled class file
 *.class
 
+ 
+
 # Log file
 *.log
+
+ 
 
 # BlueJ files
 *.ctxt
 
+ 
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
+
+ 
 
 # Package Files #
 *.jar
@@ -18,13 +26,53 @@
 *.zip
 *.tar.gz
 *.rar
+*.bin
+*.lock
+
+ 
+
+ 
+
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-/.gradle/
 
-# Eclipse Core      
-.project
+ 
 
-# JDT-specific (Eclipse Java Development Tools)     
-.classpath
+### Gradle ###
+.gradle
+/build/
+.gradle/
+# or
+*/.gradle/*
+
+ 
+
+### Metadata ###
+.metadata/
+# or
+*/.metadata/*
+
+ 
+
+ 
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+ 
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+ 
+
+# Cache of project
+.gradletasknamecache
+
+ 
+
+# Ignore `bin` dir
+bin/
+# or
+*/bin/*
