@@ -11,7 +11,6 @@ import lombok.*;
 public class Connessione {
     
 	@Id
-	@GeneratedValue
 	private Long id; 
 	private String follower; 
 	private String followed; 

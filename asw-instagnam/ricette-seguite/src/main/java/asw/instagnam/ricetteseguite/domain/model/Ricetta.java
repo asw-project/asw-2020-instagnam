@@ -10,8 +10,7 @@ import lombok.*;
 @Data @NoArgsConstructor @AllArgsConstructor
 public class Ricetta {
 	
-	@Id
-	@GeneratedValue
+	@Id	
 	private Long id; 
 	private String autore; 
 	private String titolo; 
