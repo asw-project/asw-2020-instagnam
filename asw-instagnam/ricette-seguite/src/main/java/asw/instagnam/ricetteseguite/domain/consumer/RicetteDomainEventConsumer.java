@@ -1,7 +1,7 @@
 package asw.instagnam.ricetteseguite.domain.consumer;
-import java.util.ArrayList;
+
 import java.util.Collection;
-import java.util.List;
+
 
 import asw.instagnam.ricetteseguite.domain.repository.*;
 
