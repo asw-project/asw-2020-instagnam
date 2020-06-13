@@ -13,7 +13,7 @@ public class Connessione {
 	private Long id; 
 	private String follower; 
 	private String followed; 
-//Prova commit	
+
 	public Connessione(String follower, String followed) {
 		this(); 
 		this.follower = follower; 

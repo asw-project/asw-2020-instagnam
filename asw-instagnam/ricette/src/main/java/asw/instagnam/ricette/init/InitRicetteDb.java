@@ -16,7 +16,7 @@ public class InitRicetteDb implements CommandLineRunner {
 	
 	public void run(String... args) {	
 		
-		//Aggiunte due ricette a "Cristiano" per evitare bug durante l'initialization
+		//Added two Ricette made by Cristiano for fixing an initialization bug 
 		ricetteService.createRicetta( "Benedetta", "Tonno e fagioli", "Unisci il tonno con i fagioli" );
 		ricetteService.createRicetta( "Cristiano", "Panino al prosciutto", "Metti il prosciutto nel panino" );	
 		ricetteService.createRicetta( "Cristiano", "Pizza e mortazza", "Metti la mortadella nella pizza" );	

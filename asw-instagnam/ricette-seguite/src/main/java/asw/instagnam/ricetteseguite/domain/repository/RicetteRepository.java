@@ -9,7 +9,6 @@ import asw.instagnam.ricetteseguite.domain.model.Ricetta;
 public interface RicetteRepository extends CrudRepository<Ricetta, Long> {
 	
 	public Collection<Ricetta> findAll();
-
 	public Collection<Ricetta> findAllByAutore(String autore);
 
 }

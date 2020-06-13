@@ -19,7 +19,7 @@ public class RicetteSeguiteController {
 	@Autowired 
 	private RicetteSeguiteService ricetteSeguiteService;
 
-	/* Trova le ricette (in formato breve) degli utenti seguiti da utente. */ 
+	/* Finds short ricette of user followed users. */ 
 	@GetMapping("/ricetteseguite/{utente}")
 	public Collection<Ricetta> getRicetteSeguite(@PathVariable String utente) {
 		logger.info("REST CALL: getRicetteSeguite " + utente); 

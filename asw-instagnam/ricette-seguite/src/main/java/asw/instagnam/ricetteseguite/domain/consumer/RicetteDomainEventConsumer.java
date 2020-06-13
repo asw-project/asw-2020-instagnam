@@ -25,7 +25,7 @@ public class RicetteDomainEventConsumer implements DomainEventConsumer {
 	@Autowired
 	private ConnessioniRepository connessioniRepository; 
 	
-
+	
 	@Override
 	public void onEvent(DomainEvent event) {
 		if(event instanceof RicettaCreatedEvent) {
@@ -34,22 +34,19 @@ public class RicetteDomainEventConsumer implements DomainEventConsumer {
 		else {
 			System.out.println("Evento non riconosciuto\n"); 
 		}
-		
 	}
-	
-	
+
 	private void handleRicettaCreatedEvent(DomainEvent event) {
 		RicettaCreatedEvent r = (RicettaCreatedEvent) event;
+		// Create new ricette from the event
 		Ricetta ricetta = new Ricetta(r.getId(), r.getAutore(), r.getTitolo());
 		ricetteRepository.save(ricetta);
-		
+		// Finding all connection for this author
 		Collection<Connessione> connessioni = connessioniRepository.findAllByFollowed(ricetta.getAutore());
+		// For each connessione update its ricetteSeguiteRepository
 		for (Connessione c: connessioni) {
 			     this.ricetteSeguiteRepository.save(new RicettaSeguita(c.getFollower(),ricetta.getId(),ricetta.getAutore(),ricetta.getTitolo()));
 	
 		}
-		
 	}
-
-	
 }

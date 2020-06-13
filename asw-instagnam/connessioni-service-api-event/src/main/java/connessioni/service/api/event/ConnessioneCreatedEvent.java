@@ -1,9 +1,9 @@
 package connessioni.service.api.event;
+
 import asw.instagnam.common.api.event.DomainEvent;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 
 @Data
 @NoArgsConstructor
