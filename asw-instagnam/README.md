@@ -99,7 +99,7 @@ Per eseguire questo progetto:
 
 * Avviare l'applicazione *Instagnam* avviando lo script `instagnam-scaled-start.sh` 
 
-* L'applicazione può essere arrestata usando lo script `instagnam-stop` e poi `docker-compose-delete` oppure direttamente dalla dashboard di Docker. 
+* L'applicazione può essere arrestata usando lo script `instagnam-stop` oppure direttamente dalla dashboard di Docker. 
 
 
 ## Descrizione delle attività da svolgere 
