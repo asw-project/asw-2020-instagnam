@@ -83,11 +83,23 @@ Per eseguire questo progetto:
 
 * Avviare *Docker* sul proprio dispositivo`
 
-* Avviare la build dei contenitori trammite `docker-compose-build.sh` 
+* Avviare la build dei contenitori trammite `instagnam-build.sh` 
 
-* Avviare l'applicazione *Instagnam* avviando lo script `docker-compose-start.sh` 
+* Avviare l'applicazione *Instagnam* avviando lo script `instagnam-start.sh` 
 
-* L'applicazione può essere arrestata usando lo script `docker-compose-stop` e poi `docker-compose-delete` oppure direttamente dalla dashboard di Docker. 
+* L'applicazione può essere arrestata usando lo script `instagnam-stop` o direttamente dalla dashboard Docker. 
+
+## Esecuzione con scalabilità
+
+* Aprire una finestra powershell nella cartella del progetto ed eseguire `gradle build`
+
+* Avviare *Docker* sul proprio dispositivo`
+
+* Avviare la build dei contenitori trammite `instagnam-build.sh` 
+
+* Avviare l'applicazione *Instagnam* avviando lo script `instagnam-scaled-start.sh` 
+
+* L'applicazione può essere arrestata usando lo script `instagnam-stop` e poi `docker-compose-delete` oppure direttamente dalla dashboard di Docker. 
 
 
 ## Descrizione delle attività da svolgere 
