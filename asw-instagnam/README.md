@@ -100,8 +100,3 @@ Per eseguire questo progetto:
 * Avviare l'applicazione *Instagnam* avviando lo script `instagnam-scaled-start.sh` 
 
 * L'applicazione può essere arrestata usando lo script `instagnam-stop` oppure direttamente dalla dashboard di Docker. 
-
-
-## Descrizione delle attività da svolgere 
-
-Si veda il sito web del corso di [Architettura dei sistemi software](http://cabibbo.dia.uniroma3.it/asw/).
